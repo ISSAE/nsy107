@@ -7,6 +7,7 @@ package applisimple;
 
 
 import net.cofares.libc.Vecteur;
+import net.cofares.metier.FonctionsSurVecteur;
 
 
 /**
