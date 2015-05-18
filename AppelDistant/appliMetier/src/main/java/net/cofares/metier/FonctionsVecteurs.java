@@ -17,6 +17,8 @@
  */
 package net.cofares.metier;
 
+import net.cofares.libcommune.Vecteur;
+
 /**
  * Le fonctions  a rélisé sur le domaine métier
  * dans notre cas une addition de 2 vecteurs

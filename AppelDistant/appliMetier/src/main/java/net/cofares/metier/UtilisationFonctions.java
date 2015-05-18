@@ -17,6 +17,8 @@
  */
 package net.cofares.metier;
 
+import net.cofares.libcommune.Vecteur;
+
 /**
  * une classe de test de l'addition de 2 vecteurs
  * @author pascalfares
