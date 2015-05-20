@@ -79,9 +79,16 @@ public class Vecteur implements Serializable {
      * @throws java.io.IOException 
      */
     public static Vecteur unmarshal(String data) throws IOException{
-        Vecteur rep = new Vecteur();
+        
         StreamTokenizer s = new StreamTokenizer (new StringReader(data));
         s.nextToken();
+        return unmarshal(s);
+    }
+    
+    //Reconnaitre un vecteur en entrée
+    public static Vecteur unmarshal(StreamTokenizer s) throws IOException{
+        Vecteur rep = new Vecteur();
+        //StreamTokenizer s = new StreamTokenizer (new StringReader(data));
         //On doit avoir {
         if (s.ttype != '{') return null;
         s.nextToken(); //skip { prepare le prohain token
@@ -98,7 +105,10 @@ public class Vecteur implements Serializable {
         } else return null;
         //On doit terminer par }
         if (s.ttype != '}') return null;
-        
+        s.nextToken(); //skip }
         return rep;
     }
+    
+    
+    
 }

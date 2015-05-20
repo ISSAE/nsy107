@@ -7,6 +7,7 @@ package applisimple;
 
 
 import java.io.IOException;
+import net.cofares.libc.MessagesVecteurs;
 import net.cofares.libc.Vecteur;
 import net.cofares.metier.FonctionsSurVecteur;
 
@@ -37,8 +38,11 @@ public class AppliSimple {
         //Presenter les résultat
         System.out.println(resadd);
         
-        System.out.println("Unmarshal {10,20}"+Vecteur.unmarshal("{10,20}"));
-        
+        System.out.println("Unmarshal {10,20} = "+Vecteur.unmarshal("{10,20}"));
+        MessagesVecteurs mv = MessagesVecteurs.unmarshallMessageVecteur("{{10,20},{15,20}}");
+        System.out.println("Unmarsjal coupe vecteur {{10,20},{15,20}"+ mv);
+        System.out.println(mv.getV1());
+        System.out.println(mv.getV2());
     }
     
 }
