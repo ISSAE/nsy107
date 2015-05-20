@@ -20,6 +20,7 @@ public class AppliSimple {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
         Vecteur v1 = new Vecteur();
@@ -32,11 +33,15 @@ public class AppliSimple {
         v2.setX(15);
         v2.setY(25);
         
-        //Appel du traitement
+        //Appel du traitement En local
         Vecteur resadd = FonctionsSurVecteur.add(v1, v2);
         
         //Presenter les résultat
-        System.out.println(resadd);
+        System.out.println("En local "+ v1 + v2 + resadd);
+        
+        //Appel du traitement a distance (utilisation d'un stub (proxy)
+        Vecteur resDistant= net.cofares.stub.FonctionsSurVecteur.add(v1, v2);
+         System.out.println("A distance "+ v1 + v2 + resadd);
         
         System.out.println("Unmarshal {10,20} = "+Vecteur.unmarshal("{10,20}"));
         MessagesVecteurs mv = MessagesVecteurs.unmarshallMessageVecteur("{{10,20},{15,20}}");

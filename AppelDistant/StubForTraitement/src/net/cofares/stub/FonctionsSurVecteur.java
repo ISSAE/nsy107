@@ -8,7 +8,6 @@ package net.cofares.stub;
 import java.io.IOException;
 import net.cofares.libc.MessagesVecteurs;
 import net.cofares.libc.Vecteur;
-import net.cofares.proxy.Proxy;
 
 
 
