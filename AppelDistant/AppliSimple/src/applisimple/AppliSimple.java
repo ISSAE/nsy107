@@ -6,6 +6,7 @@
 package applisimple;
 
 
+import java.io.IOException;
 import net.cofares.libc.Vecteur;
 import net.cofares.metier.FonctionsSurVecteur;
 
@@ -19,7 +20,7 @@ public class AppliSimple {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Vecteur v1 = new Vecteur();
         Vecteur v2 = new Vecteur();
         
@@ -35,6 +36,8 @@ public class AppliSimple {
         
         //Presenter les résultat
         System.out.println(resadd);
+        
+        System.out.println("Unmarshal {10,20}"+Vecteur.unmarshal("{10,20}"));
         
     }
     
