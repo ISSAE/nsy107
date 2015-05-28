@@ -9,7 +9,6 @@ package applisimple;
 import java.io.IOException;
 import net.cofares.libc.MessagesVecteurs;
 import net.cofares.libc.Vecteur;
-import net.cofares.metier.FonctionsSurVecteur;
 
 
 /**
@@ -34,7 +33,7 @@ public class AppliSimple {
         v2.setY(25);
         
         //Appel du traitement En local
-        Vecteur resadd = FonctionsSurVecteur.add(v1, v2);
+        Vecteur resadd = net.cofares.metier.FonctionsSurVecteur.add(v1, v2);
         
         //Presenter les résultat
         System.out.println("En local "+ v1 + v2 + resadd);

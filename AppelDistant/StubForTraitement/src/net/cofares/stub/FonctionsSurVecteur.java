@@ -18,9 +18,12 @@ import net.cofares.libc.Vecteur;
  */
 public class FonctionsSurVecteur {
     public static Vecteur add(Vecteur v1, Vecteur v2) throws IOException {
-       //Préparer le message (marshaling)
+      
         
         Proxy p = new Proxy("localhost", 1111);
+         //Préparer le message (marshaling)
+        //Puis le transmettre
+        //Attendre la réponse
         String rep = p.sendReceive(MessagesVecteurs.marshall(v1, v2));
         
         return Vecteur.unmarshal(rep);
