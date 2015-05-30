@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+          
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+        <h:outputText value="${bfiche.count}" /><f:view>
+            <h:form>
+                <h:dataTable value="#{bfiche.all}" var="item">
+                </h:dataTable>
+
+
+                <h:form>
+                    <h1><h:outputText value="List"/></h1>
+                    <p:dataTable value="#{bfiche.all}" var="item">
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="IdFicheDescriptive"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idFicheDescriptive}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="NomCandidat"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nomCandidat}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="NoDossier"/>
+                            </f:facet>
+                            <h:outputText value="#{item.noDossier}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="IdSpec"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idSpec}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="DateValidationFiche"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dateValidationFiche}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Thematique"/>
+                            </f:facet>
+                            <h:outputText value="#{item.thematique}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Titre"/>
+                            </f:facet>
+                            <h:outputText value="#{item.titre}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="MotsCles"/>
+                            </f:facet>
+                            <h:outputText value="#{item.motsCles}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="CahierDesCharges"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cahierDesCharges}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="PartenaireNomEntreprise"/>
+                            </f:facet>
+                            <h:outputText value="#{item.partenaireNomEntreprise}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="PartenaireRepresentant"/>
+                            </f:facet>
+                            <h:outputText value="#{item.partenaireRepresentant}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="PartenaireResponsabletechnique"/>
+                            </f:facet>
+                            <h:outputText value="#{item.partenaireResponsabletechnique}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="PartenairePosteCandidat"/>
+                            </f:facet>
+                            <h:outputText value="#{item.partenairePosteCandidat}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="PartenaireAddresse"/>
+                            </f:facet>
+                            <h:outputText value="#{item.partenaireAddresse}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="PartenaireTelephone"/>
+                            </f:facet>
+                            <h:outputText value="#{item.partenaireTelephone}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="PartenaireEmail"/>
+                            </f:facet>
+                            <h:outputText value="#{item.partenaireEmail}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="ClientNom"/>
+                            </f:facet>
+                            <h:outputText value="#{item.clientNom}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="ClientRepresentant"/>
+                            </f:facet>
+                            <h:outputText value="#{item.clientRepresentant}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="LieuRealisation"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lieuRealisation}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="VisaChefDepInsc"/>
+                            </f:facet>
+                            <h:outputText value="#{item.visaChefDepInsc}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="DateVisaCheDepInsc"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dateVisaCheDepInsc}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="TuteurResponsablePart"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tuteurResponsablePart}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="TuteurAssociePart"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tuteurAssociePart}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="NoEtud"/>
+                            </f:facet>
+                            <h:outputText value="#{item.noEtud}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="NumProfResponsable"/>
+                            </f:facet>
+                            <h:outputText value="#{item.numProfResponsable}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="NumProfAssocie"/>
+                            </f:facet>
+                            <h:outputText value="#{item.numProfAssocie}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Supprime"/>
+                            </f:facet>
+                            <h:outputText value="#{item.supprime}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="AnneeUniversitaire"/>
+                            </f:facet>
+                            <h:outputText value="#{item.anneeUniversitaire}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="TypeProjet"/>
+                            </f:facet>
+                            <h:outputText value="#{item.typeProjet}"/>
+                        </p:column>
+                    </p:dataTable>
+                </h:form>
+
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
