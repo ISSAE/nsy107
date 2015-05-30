@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="FicheDescriptiveViewDlg" widgetVar="FicheDescriptiveViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewFicheDescriptiveTitle}">
+            <h:form id="FicheDescriptiveViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{ficheDescriptiveController.selected != null}">
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_idFicheDescriptive}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.idFicheDescriptive}" title="#{bundle.ViewFicheDescriptiveTitle_idFicheDescriptive}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_nomCandidat}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.nomCandidat}" title="#{bundle.ViewFicheDescriptiveTitle_nomCandidat}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_noDossier}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.noDossier}" title="#{bundle.ViewFicheDescriptiveTitle_noDossier}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_idSpec}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.idSpec}" title="#{bundle.ViewFicheDescriptiveTitle_idSpec}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_dateValidationFiche}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.dateValidationFiche}" title="#{bundle.ViewFicheDescriptiveTitle_dateValidationFiche}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_thematique}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.thematique}" title="#{bundle.ViewFicheDescriptiveTitle_thematique}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_titre}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.titre}" title="#{bundle.ViewFicheDescriptiveTitle_titre}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_motsCles}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.motsCles}" title="#{bundle.ViewFicheDescriptiveTitle_motsCles}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_cahierDesCharges}"/>
+                        <h:outputText escape="false"  value="#{ficheDescriptiveController.selected.cahierDesCharges}" title="#{bundle.ViewFicheDescriptiveTitle_cahierDesCharges}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_partenaireNomEntreprise}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.partenaireNomEntreprise}" title="#{bundle.ViewFicheDescriptiveTitle_partenaireNomEntreprise}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_partenaireRepresentant}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.partenaireRepresentant}" title="#{bundle.ViewFicheDescriptiveTitle_partenaireRepresentant}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_partenaireResponsabletechnique}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.partenaireResponsabletechnique}" title="#{bundle.ViewFicheDescriptiveTitle_partenaireResponsabletechnique}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_partenairePosteCandidat}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.partenairePosteCandidat}" title="#{bundle.ViewFicheDescriptiveTitle_partenairePosteCandidat}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_partenaireAddresse}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.partenaireAddresse}" title="#{bundle.ViewFicheDescriptiveTitle_partenaireAddresse}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_partenaireTelephone}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.partenaireTelephone}" title="#{bundle.ViewFicheDescriptiveTitle_partenaireTelephone}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_partenaireEmail}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.partenaireEmail}" title="#{bundle.ViewFicheDescriptiveTitle_partenaireEmail}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_clientNom}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.clientNom}" title="#{bundle.ViewFicheDescriptiveTitle_clientNom}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_clientRepresentant}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.clientRepresentant}" title="#{bundle.ViewFicheDescriptiveTitle_clientRepresentant}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_lieuRealisation}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.lieuRealisation}" title="#{bundle.ViewFicheDescriptiveTitle_lieuRealisation}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_visaChefDepInsc}"/>
+                        <p:selectBooleanCheckbox value="#{ficheDescriptiveController.selected.visaChefDepInsc}" disabled="true"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_dateVisaCheDepInsc}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.dateVisaCheDepInsc}" title="#{bundle.ViewFicheDescriptiveTitle_dateVisaCheDepInsc}">
+                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_tuteurResponsablePart}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.tuteurResponsablePart}" title="#{bundle.ViewFicheDescriptiveTitle_tuteurResponsablePart}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_tuteurAssociePart}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.tuteurAssociePart}" title="#{bundle.ViewFicheDescriptiveTitle_tuteurAssociePart}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_noEtud}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.noEtud}" title="#{bundle.ViewFicheDescriptiveTitle_noEtud}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_numProfResponsable}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.numProfResponsable}" title="#{bundle.ViewFicheDescriptiveTitle_numProfResponsable}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_numProfAssocie}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.numProfAssocie}" title="#{bundle.ViewFicheDescriptiveTitle_numProfAssocie}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_supprime}"/>
+                        <p:selectBooleanCheckbox value="#{ficheDescriptiveController.selected.supprime}" disabled="true"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_anneeUniversitaire}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.anneeUniversitaire}" title="#{bundle.ViewFicheDescriptiveTitle_anneeUniversitaire}"/>
+                        <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_typeProjet}"/>
+                        <h:outputText value="#{ficheDescriptiveController.selected.typeProjet}" title="#{bundle.ViewFicheDescriptiveTitle_typeProjet}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="FicheDescriptiveViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
