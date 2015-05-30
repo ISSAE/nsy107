@@ -11,7 +11,7 @@
         <p:dialog id="FicheDescriptiveViewDlg" widgetVar="FicheDescriptiveViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewFicheDescriptiveTitle}">
             <h:form id="FicheDescriptiveViewForm">
                 <h:panelGroup id="display">
-                    <p:panelGrid columns="2" rendered="#{ficheDescriptiveController.selected != null}">
+                    <p:panelGrid columns="4" rendered="#{ficheDescriptiveController.selected != null}">
                         <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_idFicheDescriptive}"/>
                         <h:outputText value="#{ficheDescriptiveController.selected.idFicheDescriptive}" title="#{bundle.ViewFicheDescriptiveTitle_idFicheDescriptive}"/>
                         <h:outputText value="#{bundle.ViewFicheDescriptiveLabel_nomCandidat}"/>
